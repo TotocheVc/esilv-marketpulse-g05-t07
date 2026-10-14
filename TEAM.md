@@ -14,7 +14,7 @@ Copy this file to `TEAM.md` in your team repository and complete it before start
 |---|---|
 | Student 1 | @https://github.com/TotocheVc |
 | Student 2 | @https://github.com/rayzzen07 |
-| Student 3 | @vishwarajshabadi |
+| Student 3 | @https://github.com/vishwarajshabadi |
 | Student 4 | @https://github.com/kratetom-coder |
 
 
