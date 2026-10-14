@@ -6,7 +6,7 @@ Copy this file to `TEAM.md` in your team repository and complete it before start
 
 - Module: MESIFI472326 - Python, Git, Linux
 - TD Group: G05
-- MarketPulse Team: T07
+- MarketPulse Team: T007
 
 ## Members
 
