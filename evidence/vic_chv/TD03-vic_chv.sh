@@ -1,20 +1,11 @@
 #!/usr/bin/env bash
-# TD03 - local Git workflow
-# Run these commands from the repository root.
+set -e
 
-# Inspect the working tree and unstaged changes.
+# TD03: record and inspect the real TD02 market-summary change.
 git status
-git diff
-
-# After editing, stage only the file(s) you intend to commit.
-# git add <file>
-
-# Inspect staged changes before committing.
-# git diff --staged
-
-# Create a meaningful local commit after reviewing the staged diff.
-# git commit -m "Describe the change"
-
-# Inspect the local history and a commit.
+git diff 4a75a00^ 4a75a00 --check
 git log --oneline -5
-git show --stat --oneline HEAD
+git show --stat --oneline 4a75a00
+
+# Confirm the application still runs and displays both closes for each series.
+python src/main.py
