@@ -34,6 +34,13 @@ def get_last_close(prices):
     return float(row["close"])
 
 
+def print_price_summary(label, prices, currency=""):
+    unit = f" {currency}" if currency else ""
+    print(f"{label}")
+    print(f"First close: {get_first_close(prices)}{unit}")
+    print(f"Last close: {get_last_close(prices)}{unit}")
+
+
 def main():
     instruments = load_instruments()
     prices = load_prices()
@@ -63,39 +70,10 @@ def main():
     print("Observations")
     print(f"{instrument['ticker']}: {len(instrument_prices)}")
     print(f"{benchmark['ticker']}: {len(benchmark_prices)}")
-
-    print("+++++++++++++++++++++++++++++++++")
-    # print(type(instruments))
-    # print(instruments.keys())
-
-    # instrument = instruments["instrument"]
-    # benchmark = instruments["benchmark"]
-
-    # print(instrument["ticker"])
-    # print(instrument["name"])
-    # print(instrument["currency"])
-
-    # print(benchmark["ticker"])
-    # print(benchmark["name"])
-
-    # prices = load_prices()
-
-    # print(type(prices))
-    # print(type(prices[0]))
-    # print(prices[0])
-
-    # print(prices[0]["close"])
-    # print(type(prices[0]["close"]))
-
-    # close = float(prices[0]["close"])
-
-    # print(len(instrument_prices))
-    # print(len(benchmark_prices))
-
-    # Part 5
-
-    print(get_last_close(instrument_prices))
-    print(get_last_close(benchmark_prices))
+    print()
+    print_price_summary("Instrument", instrument_prices, instrument["currency"])
+    print()
+    print_price_summary("Benchmark", benchmark_prices)
 
 
 if __name__ == "__main__":
